@@ -1,0 +1,32 @@
+en:
+  date:
+    formats:
+      default: "%m/%d/%Y"
+
+  errors:
+      messages:
+        domain_taken: "%{value} is already taken"
+        invalid_domain: "%{value} is invalid"
+        needs_admin_account: "One admin account is required at least"
+        protected_page: "You can not remove index or 404 pages"
+        extname_changed: "New file does not have the original extension"
+        array_too_short: "is too small (minimum element number is %{count})"
+        liquid_syntax: "Liquid Syntax error, please check the syntax"
+        liquid_extend: "The page extends a template which does not exist"
+        invalid_theme_file: "can't be blank or isn't a zip file"
+
+  attributes:
+    defaults:
+      pages:
+        index:
+          title: "Главная"
+          body: "Материалы главной страницы"
+        "404":
+          title: "Страница не найдена"
+          body: "Content of the 404 page"
+        other:
+          body: "Content goes here"
+
+  pagination:
+    previous: "&laquo; Previous"
+    next: "Next &raquo;"

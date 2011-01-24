@@ -27,20 +27,20 @@ en:
       footer:
         who_is_behind: "Service developed by %{development} and designed by <a href=\"http://www.sachagreif.com\">Sacha Greif</a>"
       form_actions:
-        back: Back without saving
+        back: Вернуться назад без сохранения
         create: Создать
         update: Обновить
         send: Отправить
 
     errors:
       "500":
-        title: Application Error
-        notice: "We're sorry, but something went wrong"
-        link: "&rarr; Back to the application"
+        title: Ошибка приложения
+        notice: "Извените, но возникла ошибка."
+        link: "&rarr; Назад к приложению"
       "404":
-        title: Page not found
-        notice: "The page you requested does not exist."
-        link: "&rarr; Back to the application"
+        title: Страница не найдена
+        notice: "Страницы, которую Вы искали не существует."
+        link: "&rarr; Назад к приложению"
 
     notifications:
       new_content_instance:
@@ -52,7 +52,7 @@ en:
       edit:
         title: Editing custom field
       kind:
-        string: Simple Input
+        string: Простой ввод
         text: Текст
         category: Селект
         boolean: Чекбокс
@@ -64,7 +64,7 @@ en:
       edit_field:
         title: Редактировать поле
       edit_category:
-        title: Edit options
+        title: Изменить опции
         help: Manage the list of options for your select box.
         collection_label: Список опций
       custom_form:
@@ -91,16 +91,16 @@ en:
 
     pages:
       index:
-        title: Listing pages
+        title: Список страниц
         help: "Pages are organized as a tree. You can order pages as well as folders"
         no_items: "There are no pages for now. Just click <a href=\"%{url}\">here</a> to create the first one."
-        new: new page
+        new: новая страница
         lastest_items: Последние страницы
       new:
         title: Новая страница
         help: "Please fill in the below form to create your page. Be careful, by default, the page is not published."
       page:
-        updated_at: updated at
+        updated_at: "дата обновления:"
       edit:
         show: показать
         help: "The page title can be updated by clicking it."
@@ -118,7 +118,7 @@ en:
 
     snippets:
       index:
-        title: Listing snippets
+        title: Список сниппетов
         help: "Snippets are portion of HTML code which can be found at different places within the site (such as a footer)."
         no_items: "There are no snippets for now. Just click <a href=\"%{url}\">here</a> to create the first one."
         new: новый сниппет
@@ -129,7 +129,7 @@ en:
         title: Редактирование сниппета
         help: "Fill in the form below to update your snippet."
       snippet:
-        updated_at: Updated at
+        updated_at: "Дата обновления:"
 
     sites:
       new:
@@ -145,7 +145,7 @@ en:
 
     memberships:
       new:
-        title: New membership
+        title: Новый пользователь
         help: "Please give the account email to add. If it does not exist, you will be redirected to the account creation form."
 
     accounts:
@@ -159,6 +159,7 @@ en:
         new_site: новый сайт
         en: Английский
         fr: Французский
+        ru: Русский
         ask_for_name: "Please type your new name"
 
     theme_assets:
@@ -168,13 +169,13 @@ en:
         all: все ассеты
         new: новый файл
         snippets: Сниппеты
-        css_and_js: Style and javascript
+        css_and_js: Стили и джаваскрипты
         fonts: Шрифты
         images: Изображения
         media: Медиа
         no_items: "There are no files for now. Just click <a href=\"%{url}\">here</a> to create the first one."
       asset:
-        updated_at: Updated at
+        updated_at: "Дата обновления:"
       new:
         title: Новый файл
         help: "You have the choice to either upload any file or to copy/paste a stylesheet or a javascript in plain text."
@@ -201,45 +202,45 @@ en:
       edit:
         help: "The collection name can be updated by clicking it. You can customize assets in a collection by adding new fields."
         add_asset: добавить ассет
-        destroy: remove collection
+        destroy: удалить коллекцию
         no_items: "There are no assets for now. Just click <a href=\"%{url}\">here</a> to create the first one."
         ask_for_name: "Please type the new name"
 
     assets:
       new:
-        title: New asset
+        title: Новый ассет
         help: "Fill in the form below to create your asset."
       edit:
-        title: Edit asset
+        title: Редактировать ассет
         help: "Fill in the form below to update your asset."
 
     content_types:
       index:
-        new: new model
+        new: новая модель
       new:
-        title: New model
+        title: Новая модель
         help: "Create your own data model (Projects, People, ...etc). Your model should have one field at least. The items created from this content type would have their first field mandatory."
       edit:
-        title: Editing model
+        title: Редактирование модели
         help: "Your model should have one field at least. The items created from this content type would have their first field mandatory."
-        show_items: show items
-        new_item: new item
+        show_items: показать элементы
+        new_item: новый элемент
       form:
         order_by:
           created_at: 'By "created at" date'
           updated_at: 'By "updated at" date'
-          position_in_list: Manually
+          position_in_list: Вручную
 
     contents:
       index:
         title: 'Listing "%{type}"'
-        edit: edit model
-        destroy: remove model
-        download: download items
-        new: new item
-        category_noname: "No name"
-        lastest_items: "Lastest items"
-        updated_at: "Updated at"
+        edit: редактировать модель
+        destroy: удалить модель
+        download: скачать элементы
+        new: новый элемент
+        category_noname: "Без имени"
+        lastest_items: "Последние элементы"
+        updated_at: "Дата обновления:"
       list:
         no_items: "There are no items for now. Just click <a href=\"%{url}\">here</a> to create the first one."
       new:
@@ -248,7 +249,7 @@ en:
         title: '%{type} &mdash; editing item'
 
     image_picker:
-      link: Insert an image into the code
+      link: Вставить изображение в код
 
     cross_domain_sessions:
       new:
@@ -257,18 +258,18 @@ en:
 
     imports:
       new:
-        title: Import
+        title: Импорт
         help: "Be careful when you upload a new theme for your existing website, your current data could be modified or even removed."
       show:
         title: Import in progress
         help: "Your site is being updated from the theme zip file you have just uploaded. It lasts a couple of seconds."
         steps:
-          site: Site information
+          site: Информация про сайт
           content_types: Custom content types
-          assets: Theme files
-          asset_collections: Asset collections
-          snippets: Snippets
-          pages: Pages
+          assets: Файлы темы
+          asset_collections: Коллекции ассетов
+          snippets: Сниппеты
+          pages: Страницы
         messages:
           success: "Your site was successfully updated."
           failure: "The import did not work."
@@ -276,25 +277,25 @@ en:
     installation:
       common:
         title: First Locomotive Installation
-        next: Next
+        next: Следующий
       step_1:
-        title: Step 1/3
+        title: Шаг 1/3
         explanations: Here is the first step of the Locomotive installation. Please read carefully what is written below.
         database:
-          label: "Database name: <em>%{name}</em>"
+          label: "Имя базы данных: <em>%{name}</em>"
           notes: "All the mongodb connection settings can be found in the <b>config/mongoid.yml</b> file of your application."
         default_domain:
-          label: "Default domain name: <em>%{name}</em>"
+          label: "Имя домена по-умолчанию: <em>%{name}</em>"
           notes: "Basically, Locomotive is a multi websites platform. Each site instance has a default entry, also called subdomain and based on the default domain name. Obviously, you are free to map other domains to your site instance working like aliases. <br/>The default domain name value can be found in the <b>config/initializers/locomotive.rb</b> file."
       step_2:
-        title: "Step 2/3 &mdash; Create account"
-        name: Account name
+        title: "Шаг 2/3 &mdash; Создать учётную запись"
+        name: Имя учётной записи
         email: Email
-        password: Password
-        password_confirmation: Password confirmation
+        password: Пароль
+        password_confirmation: Подтверждение пароля
         done: "You have already added an account:<br/><strong>%{name}</strong>, <em>%{email}</em>"
-        next: Create account
+        next: Создать учётную запись
       step_3:
-        title: "Step 3/3 &mdash; Create first site"
+        title: "Шаг 3/3 &mdash; Создать первый сайт"
         explanations: "This is the last step of the installation. You can upload a theme as a zip file. We have free available themes <a href=\"http://www.locomotivecms.com/support/themes\">here</a>."
-        next: Create site
+        next: Создать сайт
