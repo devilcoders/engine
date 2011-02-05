@@ -1,9 +1,13 @@
 BOARD:
 
-- add metadata to sites
+x moving to mongoid 2.0.0 rc.6
+  x accepts_nested_attributes (javascript part)
+  x check the theme uploader
+  x release new version of CustomFields, ActsAsTree gems
 
 BACKLOG:
 
+- add metadata to sites
 - validation for custom fields
 - new custom field types:
   - belongs_to => association
@@ -13,11 +17,14 @@ BACKLOG:
   - editable elements should wrap a tag: div, h1, ...etc (default span)
   - edit images (upload new ones, ...etc) => wait for aloha or send them an email ?
 
-- refactor slugify method (use parameterize + create a module)
-
 - global regions: keyword in editable element (http://www.mongodb.org/display/DOCS/Updating)
 - write my first tutorial about locomotive
 - cucumber features for admin pages (in progress)
+
+REFACTORING:
+
+  - refactor slugify method (use parameterize + create a module)
+  - move content_type and content_instances in the CustomFields plugin (much more appropriate)
 
 BUGS:
 

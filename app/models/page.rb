@@ -38,7 +38,7 @@ class Page
 
   ## named scopes ##
   scope :latest_updated, :order_by => [[:updated_at, :desc]], :limit => Locomotive.config.lastest_items_nb
-  scope :index, :where => { :slug => 'index', :depth => 0 }
+  scope :root, :where => { :slug => 'index', :depth => 0 }
   scope :not_found, :where => { :slug => '404', :depth => 0 }
   scope :published, :where => { :published => true }
   scope :fullpath, lambda { |fullpath| { :where => { :fullpath => fullpath } } }
@@ -87,7 +87,7 @@ class Page
   protected
 
   def do_not_remove_index_and_404_pages
-    return if (self.site rescue nil).nil?
+    return if self.site.nil? || self.site.destroyed?
 
     if self.index? || self.not_found?
       self.errors[:base] << I18n.t('errors.messages.protected_page')

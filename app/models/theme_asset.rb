@@ -21,8 +21,8 @@ class ThemeAsset
 
   ## callbacks ##
   before_validation :store_plain_text
-  before_save :sanitize_folder
-  before_save :build_local_path
+  before_validation :sanitize_folder
+  before_validation :build_local_path
 
   ## validations ##
   validates_presence_of :site, :source
@@ -41,7 +41,7 @@ class ThemeAsset
 
   %w{movie image stylesheet javascript font}.each do |type|
     define_method("#{type}?") do
-      self.content_type == type
+      self.content_type.to_s == type
     end
   end
 
@@ -51,7 +51,7 @@ class ThemeAsset
 
   def local_path(short = false)
     if short
-      self.read_attribute(:local_path).gsub(/^#{self.content_type.pluralize}\//, '')
+      self.read_attribute(:local_path).gsub(/^#{self.content_type.to_s.pluralize}\//, '')
     else
       self.read_attribute(:local_path)
     end
@@ -70,7 +70,11 @@ class ThemeAsset
   end
 
   def plain_text
-    @plain_text ||= self.source.read
+    if RUBY_VERSION =~ /1\.9/
+      @plain_text ||= (self.source.read.force_encoding('UTF-8') rescue nil)
+    else
+      @plain_text ||= self.source.read
+    end
   end
 
   def performing_plain_text?
@@ -94,6 +98,11 @@ class ThemeAsset
     { :url => self.source.url }.merge(self.attributes)
   end
 
+  def self.all_grouped_by_folder(site, include_all = true)
+    assets = site.theme_assets.visible(include_all).order_by([[:slug, :asc]])
+    assets.group_by { |a| a.folder.split('/').first.to_sym }
+  end
+
   protected
 
   def safe_source_filename
@@ -101,19 +110,23 @@ class ThemeAsset
   end
 
   def sanitize_folder
-    self.folder = self.content_type.pluralize if self.folder.blank?
+    self.folder = self.content_type.to_s.pluralize if self.folder.blank?
 
     # no accents, no spaces, no leading and ending trails
     self.folder = ActiveSupport::Inflector.transliterate(self.folder).gsub(/(\s)+/, '_').gsub(/^\//, '').gsub(/\/$/, '').downcase
 
     # folder should begin by a root folder
     if (self.folder =~ /^(stylesheets|javascripts|images|media|fonts)/).nil?
-      self.folder = File.join(self.content_type.pluralize, self.folder)
+      self.folder = File.join(self.content_type.to_s.pluralize, self.folder)
     end
   end
 
   def build_local_path
-    self.local_path = File.join(self.folder, self.safe_source_filename)
+    if filename = self.safe_source_filename
+      self.local_path = File.join(self.folder, filename)
+    else
+      nil
+    end
   end
 
   def escape_shortcut_urls(text)
