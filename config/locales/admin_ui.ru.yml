@@ -1,4 +1,4 @@
-en:
+ru:
   admin:
     buttons:
       login: Войти
@@ -25,7 +25,7 @@ en:
         site: Сайт
         theme_assets: Файлы темы
       footer:
-        who_is_behind: "Service developed by %{development} and designed by <a href=\"http://www.sachagreif.com\">Sacha Greif</a>"
+        who_is_behind: "Разработка: %{development} Дизайн: <a href=\"http://www.sachagreif.com\">Sacha Greif</a>"
       form_actions:
         back: Вернуться назад без сохранения
         create: Создать
@@ -44,8 +44,8 @@ en:
 
     notifications:
       new_content_instance:
-        subject: "[%{type}] new"
-        title: "Hi %{name}, just to let you know that a new instance has been created on %{date}"
+        subject: "[%{type}] новый"
+        title: "Привет %{name}, just to let you know that a new instance has been created on %{date}"
         type: "Модель: %{type}"
 
     custom_fields:
@@ -85,7 +85,7 @@ en:
         email: "Ваш email"
       edit:
         title: Обновить мой пароль
-        link: "&rarr; Back to login page"
+        link: "&rarr; Назад на страницу входа"
         password: "Ваш новый пароль"
         password_confirmation: "Подтверждение вашего нового пароля"
 
@@ -124,17 +124,17 @@ en:
         new: новый сниппет
       new:
         title: Новый сниппет
-        help: "Fill in the form below to update your snippet."
+        help: "Заполните форму, приведённую ниже, что-бы создать новый сниппет."
       edit:
         title: Редактирование сниппета
-        help: "Fill in the form below to update your snippet."
+        help: "Заполните форму, приведённую ниже, что-бы обновить сниппет."
       snippet:
         updated_at: "Дата обновления:"
 
     sites:
       new:
         title: Новый сайт
-        help: "Fill in the form below to create your new site."
+        help: "Заполните форму, приведённую ниже, что-бы создать новый сайт."
 
     current_sites:
       edit:
@@ -151,7 +151,7 @@ en:
     accounts:
       new:
         title: Новая учётная запись
-        help: "Fill in the form below to add a new account."
+        help: "Заполните форму, приведённую ниже, что-бы создать новую учётную запись."
 
     my_accounts:
       edit:
@@ -160,7 +160,7 @@ en:
         en: Английский
         fr: Французский
         ru: Русский
-        ask_for_name: "Please type your new name"
+        ask_for_name: "Пожалуйста, введите ваше имя"
 
     theme_assets:
       index:
@@ -188,7 +188,7 @@ en:
         choose_plain_text: Выберите простой текст
       images:
         title: Список изображений
-        no_items: "There are no files for now."
+        no_items: "Файлов пока нет."
 
     asset_collections:
       index:
@@ -204,15 +204,15 @@ en:
         add_asset: добавить ассет
         destroy: удалить коллекцию
         no_items: "There are no assets for now. Just click <a href=\"%{url}\">here</a> to create the first one."
-        ask_for_name: "Please type the new name"
+        ask_for_name: "Пожалуйста, введите новое имя."
 
     assets:
       new:
         title: Новый ассет
-        help: "Fill in the form below to create your asset."
+        help: "Заполните форму, приведённую ниже, что-бы создать новый ассет."
       edit:
         title: Редактировать ассет
-        help: "Fill in the form below to update your asset."
+        help: "Заполните форму, приведённую ниже, что-бы обновить ассет."
 
     content_types:
       index:
@@ -227,13 +227,13 @@ en:
         new_item: новый элемент
       form:
         order_by:
-          created_at: 'By "created at" date'
-          updated_at: 'By "updated at" date'
+          created_at: 'По "создано в" дате'
+          updated_at: 'По "обновлено в" дате'
           position_in_list: Вручную
 
     contents:
       index:
-        title: 'Listing "%{type}"'
+        title: 'Список "%{type}"'
         edit: редактировать модель
         destroy: удалить модель
         download: скачать элементы
@@ -244,16 +244,16 @@ en:
       list:
         no_items: "There are no items for now. Just click <a href=\"%{url}\">here</a> to create the first one."
       new:
-        title: '%{type} &mdash; new item'
+        title: '%{type} &mdash; новый елемент'
       edit:
-        title: '%{type} &mdash; editing item'
+        title: '%{type} &mdash; редактирование елемента'
 
     image_picker:
       link: Вставить изображение в код
 
     cross_domain_sessions:
       new:
-        title: Cross-domain authentication
+        title: Кросс-доменная аунтификация
         notice: You will be redirected to the website in a couple of seconds.
 
     imports:
@@ -261,7 +261,7 @@ en:
         title: Импорт
         help: "Be careful when you upload a new theme for your existing website, your current data could be modified or even removed."
       show:
-        title: Import in progress
+        title: Идёт процесс импорта
         help: "Your site is being updated from the theme zip file you have just uploaded. It lasts a couple of seconds."
         steps:
           site: Информация про сайт
@@ -271,12 +271,12 @@ en:
           snippets: Сниппеты
           pages: Страницы
         messages:
-          success: "Your site was successfully updated."
-          failure: "The import did not work."
+          success: "Ваш сайт был успешно обновлён."
+          failure: "Импорт не сработал."
 
     installation:
       common:
-        title: First Locomotive Installation
+        title: Первая установка Locomotive
         next: Следующий
       step_1:
         title: Шаг 1/3

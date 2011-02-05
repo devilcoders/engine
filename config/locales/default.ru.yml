@@ -25,7 +25,7 @@ en:
           title: "Страница не найдена"
           body: "Content of the 404 page"
         other:
-          body: "Content goes here"
+          body: "Тут будет контент"
 
   pagination:
     previous: "&laquo; Previous"
